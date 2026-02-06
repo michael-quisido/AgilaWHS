@@ -34,3 +34,4 @@ Please remove all of my personal information (projects, images, etc.) before dep
 # nextjs_portfolio_dev
 # nextjs_portfolio_dev
 # nextjs_portfolio_dev
+# nextjs_portfolio_dev
