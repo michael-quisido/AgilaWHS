@@ -1,24 +1,23 @@
 import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
+import { Inter } from "next/font/google";
+import LocalFont from "next/font/local"; // Correct import for local fonts
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "Agila-WHS",
+    template: "%s | Agila-WHS",
   },
   description: "Co-founder of unkey.dev and founder of planetfall.io",
   openGraph: {
-    title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: "Agila-WHS",
+    description: "Co-founder of unkey.dev and founder of planetfall.io",
+    url: "https://agila-whs.com",
+    siteName: "Agila-WHS",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://agila-whs.com/og.png",
         width: 1920,
         height: 1080,
       },
@@ -45,11 +44,13 @@ export const metadata: Metadata = {
     shortcut: "/favicon.png",
   },
 };
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
+// Use LocalFont to load your local font
 const calSans = LocalFont({
   src: "../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
@@ -61,13 +62,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" className={`${inter.variable} ${calSans.variable}`}>
       <head>
         <Analytics />
       </head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined}`}
       >
         {children}
       </body>
