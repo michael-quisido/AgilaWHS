@@ -13,7 +13,8 @@ export default function Home() {
           alt="Logo"
           width={260}
           height={0}
-          className="object-contain h-auto animate-fade-in-slow"
+          sizes="(max-width: 640px) 180px, (max-width: 768px) 220px, 260px"
+          className="object-contain h-auto w-[100px] sm:w-[180px] md:w-[220px] lg:w-[260px] animate-fade-in-slow"
           unoptimized
         />
       </div>
